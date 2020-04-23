@@ -1,0 +1,19 @@
+py manage.py runserver
+
+BOOTSTRAP-3.3.7
+----------
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+{% load staticfiles %}
+  <link rel="stylesheet" href="{%static 'css/emp.css'%}">
+
+  {% if emp_list %}
+     {%for emp in emp_list%}
+    {%endfor%}
+    {%else%}
+    {%endif%}
+
+     hydjobs_record=Hydjobs.objects.get_or_create(name=fname,address=faddress,
+                                             eligibility=feligibility, email=femail, phonenumber=fphonenumber )
+populate(n)
